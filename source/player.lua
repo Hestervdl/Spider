@@ -1,5 +1,6 @@
 local pd <const> = playdate
 local gfx <const> = pd.graphics
+import "silk"
 
 class('player').extends(gfx.sprite)
 
@@ -28,5 +29,9 @@ function player:update()
         if self.x > 0 then
             self:moveBy(-self.Speed,0)
         end
+    end
+
+    if pd.buttonJustPressed(pd.kButtonA) then
+        silk(self.x, self.y, 5)
     end
 end
