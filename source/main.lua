@@ -1,6 +1,9 @@
 import "CoreLibs/graphics"
+import "corelibs/object"
+import "CoreLibs/sprites"
 
-local gfx <const> = playdate.graphics
+local pd <const> = playdate
+local gfx <const> = pd.graphics
 
 function playdate.update() 
     gfx.clear()
